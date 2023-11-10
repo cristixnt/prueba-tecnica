@@ -1,0 +1,68 @@
+<div *ngIf="usuario" class="center">
+  <h2>{{ usuario.nombre }}</h2>
+  <div>
+    Nombre:
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="usuario.nombre"
+      placeholder="Nombre"
+    />
+  </div>
+  <br />
+  <div>
+    Apellido:
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="usuario.apellido"
+      placeholder="Apellido"
+    />
+  </div>
+  <br />
+  <div>
+    Cedula:
+    <input
+      class="form-control"
+      [(ngModel)]="usuario.cedula"
+      placeholder="Cedula"
+      min="1"
+      max="9999999999"
+      type="number"
+    />
+  </div>
+  <br />
+  <div>
+    UserName:
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="usuario.username"
+      placeholder="UserName"
+    />
+  </div>
+  <br />
+  <div class="crud-buttons">
+    <button
+      class="btn btn-primary"
+      (click)="updateUsuario(usuario)"
+      *ngIf="usuario.id"
+    >
+      Guardar
+    </button>
+    <button
+      class="btn btn-danger"
+      (click)="deleteUsuario(usuario)"
+      *ngIf="usuario.id"
+    >
+      Eliminar
+    </button>
+    <button
+      class="btn btn-success"
+      (click)="createUsuario(usuario)"
+      *ngIf="!usuario.id"
+    >
+      Crear
+    </button>    
+  </div>
+</div>

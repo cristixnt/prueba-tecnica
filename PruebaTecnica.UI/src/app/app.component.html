@@ -1,0 +1,17 @@
+<section>
+  <app-login *ngIf="!logged" (onCallParent)="updateToken()"></app-login>
+</section>
+
+<section class="center">
+  <app-usuario *ngIf="logged"></app-usuario>
+  <hr />
+</section>
+<section class="center">
+  <button
+    class="btn btn-danger btn-block mb-4"
+    *ngIf="logged"
+    (click)="cerrarSesion()"
+  >
+    Cerrar sesion
+  </button>
+</section>

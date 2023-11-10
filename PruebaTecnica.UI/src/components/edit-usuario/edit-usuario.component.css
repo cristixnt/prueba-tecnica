@@ -1,0 +1,11 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crud-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

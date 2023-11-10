@@ -1,0 +1,9 @@
+.div-filtro{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button-filter{
+    display: flex;
+    justify-content: right;
+}
